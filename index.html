@@ -1,32 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">    
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Бобик Калькулятор</title>
 </head>
 <body>
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <div id="content"></div>
-
-    <script>
-        async function fetchContent() {
-            try {
-                const response = await fetch('http://web.bobik.gulyatv.ru/');
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const data = await response.text();
-                document.getElementById('content').innerHTML = data;
-            } catch (error) {
-                console.error('There was a problem with the fetch operation:', error);
-                document.getElementById('content').innerHTML = '<p>Error loading content</p>';
-            }
-        }
-
-        fetchContent();
-    </script>
+    <iframe src="http://web.bobik.gulyatv.ru/" width="100%" height="600px"></iframe>
 </body>
 </html>
